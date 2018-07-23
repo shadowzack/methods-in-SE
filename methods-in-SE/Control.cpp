@@ -19,8 +19,6 @@ void Control::draw(Graphics& g, int x, int y, size_t z) {
 		_borderDrawer->draw(g, _left + x, _top + y, _width, _height);
 }
 
-
-
 //getters
 Control* Control::getFocus() {
 	return SingletonFocused::instance()->getfocus();

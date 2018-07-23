@@ -1,9 +1,6 @@
 #pragma once
 #ifndef EVENTHANDLER_H
 #define EVENTHANDLER_H
-
-
-
 #include "Control.h"
 #include <Windows.h>
 #include "Graphics.h"

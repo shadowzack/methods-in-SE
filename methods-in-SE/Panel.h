@@ -1,8 +1,6 @@
 #pragma once
 #ifndef PANEL_H
 #define PANEL_H
-
-
 #include "Button.h"
 #include <vector>
 

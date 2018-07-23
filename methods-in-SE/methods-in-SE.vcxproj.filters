@@ -45,9 +45,6 @@
     <ClInclude Include="EventHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Form.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="MouseListener.h">
       <Filter>Header Files</Filter>
     </ClInclude>
