@@ -11,17 +11,13 @@ enum class BorderType { Single, Double, None };
 class Control
 {
 protected:
-	int _left;
-	int _top;
-	int _width;
-	int _height;
-	int _cursorPositionx;
-	int _cursorPositiony;
+	int _left,_top;
+	int _width,_height;
+	int _cursorPositionx,_cursorPositiony;
 	bool _visible;
 	bool opened;
 	size_t _layer;
-	Color _forgroundcolor;
-	Color _backgroundcolor;
+	Color _forgroundcolor,_backgroundcolor;
 private:
 	const BorderStyle *_borderDrawer;
 public:
