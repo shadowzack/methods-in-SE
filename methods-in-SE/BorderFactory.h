@@ -33,7 +33,7 @@ private:
 	NullBorderDrawer _null;
 	SingleBorderDrawer _single;
 	DoubleBorderDrawer _double;
-};
 
+};
 
 #endif // !BORDERFACTORY_H
