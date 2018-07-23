@@ -18,19 +18,19 @@ void TextBox::mousePressed(int x, int y, bool isLeft) {
 }
 
 void TextBox::keyDown(int keyCode, char charecter) {
-	auto _pos = Focused::instance()->getGraph()->getInfo();
+	auto _pos = SingletonFocused::instance()->getGraph()->getInfo();
 	this->_cursorPositionx = _pos.dwCursorPosition.X;
 
 	if (keyCode == VK_LEFT) {
 		if (_pos.dwCursorPosition.X > this->getLeft() + 1) {
 			this->_cursorPositionx--;
-			Focused::instance()->getGraph()->moveTo(_cursorPositionx, _pos.dwCursorPosition.Y);
+			SingletonFocused::instance()->getGraph()->moveTo(_cursorPositionx, _pos.dwCursorPosition.Y);
 		}
 	}
 	else if (keyCode == VK_RIGHT) {
 		if (_pos.dwCursorPosition.X <= _text.size() + _left)
 			this->_cursorPositionx++;
-		Focused::instance()->getGraph()->moveTo(_cursorPositionx, _pos.dwCursorPosition.Y);
+		SingletonFocused::instance()->getGraph()->moveTo(_cursorPositionx, _pos.dwCursorPosition.Y);
 	}
 	else if (keyCode == VK_BACK) {
 		if (_pos.dwCursorPosition.X == this->getText().size() + _left + 1) {
@@ -38,9 +38,9 @@ void TextBox::keyDown(int keyCode, char charecter) {
 				_text.pop_back();
 		}
 		if (_cursorPositionx > _left + 1)
-			Focused::instance()->getGraph()->moveTo(_cursorPositionx--, _pos.dwCursorPosition.Y);
+			SingletonFocused::instance()->getGraph()->moveTo(_cursorPositionx--, _pos.dwCursorPosition.Y);
 		else
-			Focused::instance()->getGraph()->moveTo(_cursorPositionx, _pos.dwCursorPosition.Y);
+			SingletonFocused::instance()->getGraph()->moveTo(_cursorPositionx, _pos.dwCursorPosition.Y);
 	}
 	else {
 		if (_cursorPositionx < _left + getWidth()) {

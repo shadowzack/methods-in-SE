@@ -10,7 +10,7 @@
 #include "Form.h"
 
 
-Focused* Focused::_instance = 0;
+SingletonFocused* SingletonFocused::_instance = 0;
 int main()
 {
 	Form calform;

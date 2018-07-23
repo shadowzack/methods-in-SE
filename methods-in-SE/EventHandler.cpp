@@ -16,7 +16,7 @@ EventHandler::EventHandler(DWORD input, DWORD output)
 void EventHandler::run(Control &c)
 {
 	int lock = 0;
-	Focused::instance()->setGraph(_graphics);
+	SingletonFocused::instance()->setGraph(_graphics);
 	/* checking if the main panel is inside the Console
 	* if no- change the console size
 	*/

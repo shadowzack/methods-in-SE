@@ -11,27 +11,58 @@ Control::Control()
 	opened = false;
 }
 
-//getters
-Control* Control::getFocus() {
-	return Focused::instance()->getfocus();
-}
-bool Control::canGetFocus() {
-	return false;
-}
 
-//drawer
+//draw func
 void Control::draw(Graphics& g, int x, int y, size_t z) {
 	if (z > _layer) return;
 	if (getVisibilty())
 		_borderDrawer->draw(g, _left + x, _top + y, _width, _height);
 }
 
-//setters list
+
+
+//getters
+Control* Control::getFocus() {
+	return SingletonFocused::instance()->getfocus();
+}
+bool Control::canGetFocus() {
+	return false;
+}
+size_t Control::getLayer() const {
+	return _layer;
+}
+void Control::setLayer(size_t layer) {
+	this->_layer = layer;
+}
+int Control::getWidth() const {
+	return _width;
+}
+int Control::getLeft()const {
+	return _left;
+}
+int Control::getTop()const {
+	return _top;
+}
+Color Control::getBackground()const {
+	return _backgroundcolor;
+}
+Color Control::getForeground()const {
+	return _forgroundcolor;
+}
+int Control::getHeight()const {
+	return _height;
+}
+bool Control::getVisibilty()const {
+	return _visible;
+}
+
+
+//setters
 void Control::setFocus(Control& control) {
 	if (control.canGetFocus()) {
-		Focused::instance()->setFocus(control);
-		if (Focused::instance()->getGraph()) {
-			Focused::instance()->getGraph()->moveTo(control._cursorPositionx, control.getTop() + control.getHeight() - 1);
+		SingletonFocused::instance()->setFocus(control);
+		if (SingletonFocused::instance()->getGraph()) {
+			SingletonFocused::instance()->getGraph()->moveTo(control._cursorPositionx, control.getTop() + control.getHeight() - 1);
 		}
 	}
 }
@@ -56,11 +87,16 @@ void Control::setBorder(BorderType border) {
 	}
 
 }
-
-Focused * Focused::instance()
-{
-		if (!_instance)
-			_instance = new Focused;
-		return _instance;
-	
+void Control::setTop(int top) {
+	_top = top;
+	_cursorPositiony = this->getTop() + this->getHeight() - 1;
+}
+void Control::setLeft(int left) {
+	_left = left;
+}
+void Control::restCursor() {
+	_cursorPositionx = 0;
+}
+void Control::setHeight(int _y) {
+	_height = _y;
 }

@@ -12,6 +12,8 @@ enum class BorderType { Single, Double, None };
 
 class Control
 {
+private:
+	const BorderStyle *_borderDrawer;
 protected:
 	int _left,_top;
 	int _width,_height;
@@ -20,107 +22,76 @@ protected:
 	bool opened;
 	size_t _layer;
 	Color _forgroundcolor,_backgroundcolor;
-private:
-	const BorderStyle *_borderDrawer;
 public:
-	/* main methods for the graphic */
+	// graphics control setters and getters
 	void setVisibility(bool visibility);
 	void setForeground(Color color);
 	void setBackground(Color color);
-	inline Color getBackground()const;
-	inline Color getForeground()const;
+	Color getBackground()const;
+	Color getForeground()const;
 	void setBorder(BorderType border);
 
-	/* setters and getters */
-	inline size_t getLayer() const;
-	inline void setLayer(size_t layer);
-	inline int getWidth()const;
-	inline int getHeight()const;
-	inline void setHeight(int _y);
-	inline virtual void restCursor();
-	inline virtual void setLeft(int left);
-	inline virtual void setTop(int top);
-	inline virtual int getLeft()const;
-	inline virtual int getTop()const;
-	inline bool getVisibilty()const;
-	bool isOpened() { return opened; }
+	//setters 
+	void setLayer(size_t layer);
+	void setHeight(int _y);
+	virtual void restCursor();
+	virtual void setLeft(int left);
+	virtual void setTop(int top);
 	void setopen(bool open) { opened = open; }
-	/**/
-	Control();
-	static Control* getFocus();
 	static void setFocus(Control& control);
+
+	//getters
+	size_t getLayer() const;
+	int getWidth()const;
+	int getHeight()const;
+	virtual int getLeft()const;
+	virtual int getTop()const;
+	bool getVisibilty()const;
+	bool isOpened() { return opened; }
+	static Control* getFocus();
+
+	/*Abstract class functions for example each component will have different shap*/
 	virtual void draw(Graphics& g, int x, int y, size_t z);
 	virtual void mousePressed(int x, int y, bool isLeft) {};
 	virtual void keyDown(int keyCode, char charecter) {};
 	virtual void getAllControls(vector<Control*>* controls) {};
 	virtual bool canGetFocus();
 	virtual void setBorderDrawer(const BorderStyle &borderDrawer) { _borderDrawer = &borderDrawer; }
-	virtual ~Control() = default;
+	
+	//ctor && dtor
+	Control();
+	virtual ~Control() = default;//makes class pure abstarct
+
+	//class name or object type
 	virtual string className() { return "Control"; }
 };
 
-class Focused {
+/* a singletone one instance fo control*/
+class SingletonFocused {
 public:
-	 static Focused* instance();
+	//global access point
+	static SingletonFocused* instance() {
+		if (!_instance)
+			_instance = new SingletonFocused;
+		return _instance;
+	}
+
+	//getters
 	Control* getfocus() { return _focus; }
+	Graphics* getGraph() { return _graph; }
+	//setters
 	void setFocus(Control& c) { _focus = &c; }
 	void setGraph(Graphics& g) { _graph = &g; }
-	Graphics* getGraph() { return _graph; }
-	Focused(Focused const&) = delete;
-	void operator=(Focused const&) = delete;
+
+	SingletonFocused(SingletonFocused const&) = delete;
+	void operator=(SingletonFocused const&) = delete;
 private:
-	static Focused* _instance;
+	static SingletonFocused* _instance; //singlton instance
 	Control* _focus;
 	Graphics* _graph;
-	Focused() { _focus = NULL; _graph = NULL; }
+	//private ctor
+	SingletonFocused() { _focus = NULL; _graph = NULL; }
 };
-
-/*
-* Inline Methods
-*/
-
-size_t Control::getLayer() const {
-	return _layer;
-}
-void Control::setLayer(size_t layer) {
-	this->_layer = layer;
-}
-int Control::getWidth() const {
-	return _width;
-}
-int Control::getLeft()const {
-	return _left;
-}
-int Control::getTop()const {
-	return _top;
-}
-void Control::setTop(int top) {
-	_top = top;
-	_cursorPositiony = this->getTop() + this->getHeight() - 1;
-}
-void Control::setLeft(int left) {
-	_left = left;
-}
-Color Control::getBackground()const {
-	return _backgroundcolor;
-}
-Color Control::getForeground()const {
-	return _forgroundcolor;
-}
-int Control::getHeight()const {
-	return _height;
-}
-void Control::restCursor() {
-	_cursorPositionx = 0;
-}
-void Control::setHeight(int _y) {
-	_height = _y;
-}
-bool Control::getVisibilty()const {
-	return _visible;
-}
-
-
 
 #endif // !CONTORL_H
 
