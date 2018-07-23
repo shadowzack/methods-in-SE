@@ -1,16 +1,19 @@
 
 #include "stdafx.h"
-#include"Control.h"
-#include <iostream>
+#include "Graphics.h"
 #include "TextBox.h"
+#include "EventHandler.h"
+#include "Panel.h"
+#include "Label.h"
+#include"Button.h"
+#include "BorderFactory.h"
+#include "Form.h"
 
-using namespace std;
+
 Focused* Focused::_instance = 0;
 int main()
 {
-	TextBox tmp(10);
-	tmp.setText(L"last");
-	tmp.setBorder(BorderType::Single);
-	cout << " hello world \n";
+	Form calform;
+	calform.start();
 	return 0;
 }
