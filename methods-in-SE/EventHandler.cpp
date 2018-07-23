@@ -4,8 +4,7 @@
 
 using namespace std;
 
-EventHandler::EventHandler(DWORD input, DWORD output)
-	: _console(GetStdHandle(input)), _graphics(output)
+EventHandler::EventHandler(DWORD input, DWORD output):_console(GetStdHandle(input)),_graphics(output)
 {
 	GetConsoleMode(_console, &_consoleMode);
 	SetConsoleMode(_console, ENABLE_WINDOW_INPUT | ENABLE_MOUSE_INPUT);

@@ -33,7 +33,6 @@ void Graphics::setBackground(Color color)
 	_background = color;
 	updateConsoleAttributes();
 }
-//should be removed (what do you think?)
 void Graphics::setForeground(Color color)
 {
 	_foreground = color;

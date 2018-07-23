@@ -12,13 +12,12 @@ class SingleBorderDrawer : public BorderStyle {
 	virtual void draw(Graphics &g, int left, int top, int width, int height) const;
 };
 class NullBorderDrawer : public BorderStyle {
-	virtual void draw(Graphics &g, int left, int top, int width, int height) const {/*Without Border*/ }
+	virtual void draw(Graphics &g, int left, int top, int width, int height) const {/*no border*/ }
 };
 class DoubleBorderDrawer : public BorderStyle {
 	virtual void draw(Graphics &g, int left, int top, int width, int height) const;
 };
 
-/**************************************************************/
 
 class BorderFactory {
 public:
