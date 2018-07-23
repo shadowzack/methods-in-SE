@@ -30,9 +30,6 @@
     <ClInclude Include="BorderFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Focused.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="TextBox.h">
       <Filter>Header Files</Filter>
     </ClInclude>

@@ -11,7 +11,6 @@ TextBox::TextBox(int width) {
 	_cursorPositionx = 0;
 }
 
-
 void TextBox::mousePressed(int x, int y, bool isLeft) {
 	Control::getFocus()->restCursor();
 	Control::setFocus(*this);
@@ -70,3 +69,17 @@ void TextBox::draw(Graphics& g, int x, int y, size_t layer) {
 		}
 	}
 }
+
+//setters
+void TextBox::setLeft(int left) {
+	_left = left;
+	_cursorPositionx = left + _text.size() + 1;
+}
+void TextBox::setText(wstring value) {
+	this->_text = value;
+}
+//getters
+wstring TextBox::getText() const {
+	return this->_text;
+}
+

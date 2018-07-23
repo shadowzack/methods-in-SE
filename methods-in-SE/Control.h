@@ -4,7 +4,6 @@
 
 #include "Graphics.h"
 #include "BorderFactory.h"
-#include "Focused.h"
 #include <vector>
 
 using namespace std;
