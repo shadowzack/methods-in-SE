@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "TextBox.h"
 
+
 TextBox::TextBox(int width) {
 	_width = width;
 	_height = 2;
@@ -10,10 +11,12 @@ TextBox::TextBox(int width) {
 	_cursorPositionx = 0;
 }
 
+
 void TextBox::mousePressed(int x, int y, bool isLeft) {
 	Control::getFocus()->restCursor();
 	Control::setFocus(*this);
 }
+
 void TextBox::keyDown(int keyCode, char charecter) {
 	auto _pos = Focused::instance()->getGraph()->getInfo();
 	this->_cursorPositionx = _pos.dwCursorPosition.X;
