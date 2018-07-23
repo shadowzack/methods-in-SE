@@ -5,7 +5,6 @@
 #include "Label.h"
 #include "MouseListener.h"
 
-
 class Button : public Label {
 protected:
 	MouseListener * _listener;
