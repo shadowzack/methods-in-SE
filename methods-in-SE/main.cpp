@@ -8,6 +8,7 @@
 #include "Button.h"
 #include "BorderFactory.h"
 
+
 Panel* MainPanel = NULL;
 vector<wstring>str;
 SingletonFocused* SingletonFocused::_instance = 0;
