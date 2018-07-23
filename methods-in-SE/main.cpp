@@ -14,6 +14,7 @@ SingletonFocused* SingletonFocused::_instance = 0;
 
 int main()
 {
+
 	//panel contanier
 	Panel panel(45, 36);
 	panel.setBackground(Color::Black);
