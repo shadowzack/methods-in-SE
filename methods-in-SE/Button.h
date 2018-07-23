@@ -1,11 +1,6 @@
 #pragma once
 #include "Label.h"
-
-
-struct MouseListener
-{
-	virtual void MousePressed(Control &control, int x, int y, bool isLeft) = 0;
-};
+#include "MouseListener.h"
 
 
 class Button : public Label {
