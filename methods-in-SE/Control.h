@@ -1,4 +1,6 @@
 #pragma once
+#ifndef CONTORL_H
+#define CONRTOL_H
 
 #include "Graphics.h"
 #include "BorderFactory.h"
@@ -118,4 +120,7 @@ bool Control::getVisibilty()const {
 	return _visible;
 }
 
+
+
+#endif // !CONTORL_H
 

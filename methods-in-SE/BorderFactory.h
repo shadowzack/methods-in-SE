@@ -1,8 +1,6 @@
 #pragma once
 #ifndef BORDERFACTORY_H
 #define BORDERFACTORY_H
-
-
 #include "Graphics.h"
 #include <string>
 using namespace std;

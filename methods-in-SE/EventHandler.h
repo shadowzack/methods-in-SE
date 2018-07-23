@@ -1,4 +1,8 @@
 #pragma once
+#ifndef EVENTHANDLER_H
+#define EVENTHANDLER_H
+
+
 
 #include "Control.h"
 #include <Windows.h>
@@ -18,3 +22,4 @@ private:
 	void deepFocus(Control &main, Control *focused);
 };
 
+#endif // !EVENTHANDLER_H

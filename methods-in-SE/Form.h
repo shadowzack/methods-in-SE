@@ -1,4 +1,8 @@
 #pragma once
+#ifndef FORM_H
+#define FORM_H
+
+
 #include "stdafx.h"
 #include "Graphics.h"
 #include "TextBox.h"
@@ -97,5 +101,4 @@ public:
 	}
 };
 
-
-
+#endif // !FORM_H

@@ -1,4 +1,8 @@
 #pragma once
+#ifndef TEXTBOX_H
+#define TEXTBOX_H
+
+
 #include "Control.h"
 
 class TextBox : public Control {
@@ -33,3 +37,5 @@ void TextBox::setText(wstring value) {
 wstring TextBox::getText() const {
 	return this->_text;
 }
+
+#endif // !TEXTBOX_H

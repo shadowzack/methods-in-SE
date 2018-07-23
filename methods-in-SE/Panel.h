@@ -1,4 +1,8 @@
 #pragma once
+#ifndef PANEL_H
+#define PANEL_H
+
+
 #include "Button.h"
 #include <vector>
 
@@ -17,4 +21,5 @@ public:
 	virtual void mousePressed(int x, int y, bool isLeft);
 
 };
+#endif // !PANEL_H
 

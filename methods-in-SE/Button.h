@@ -1,4 +1,7 @@
 #pragma once
+#ifndef BUTTON_H
+#define BUTTON_H
+
 #include "Label.h"
 #include "MouseListener.h"
 
@@ -19,3 +22,5 @@ public:
 MouseListener& Button::getListener() {
 	return *_listener;
 }
+
+#endif // !BUTTON_H
