@@ -148,6 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="BorderFactory.h" />
+    <ClInclude Include="Button.h" />
     <ClInclude Include="Control.h" />
     <ClInclude Include="Focused.h" />
     <ClInclude Include="Graphics.h" />
