@@ -149,12 +149,19 @@
   <ItemGroup>
     <ClInclude Include="BorderFactory.h" />
     <ClInclude Include="Button.h" />
+    <ClInclude Include="CheckList.h" />
+    <ClInclude Include="ComboBox.h" />
     <ClInclude Include="Control.h" />
     <ClInclude Include="EventHandler.h" />
+    <ClInclude Include="Focuslist.h" />
     <ClInclude Include="Graphics.h" />
     <ClInclude Include="Label.h" />
+    <ClInclude Include="Listeners.h" />
+    <ClInclude Include="MessageBox.h" />
     <ClInclude Include="MouseListener.h" />
+    <ClInclude Include="NumericBox.h" />
     <ClInclude Include="Panel.h" />
+    <ClInclude Include="RadioBox.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TextBox.h" />
@@ -162,12 +169,18 @@
   <ItemGroup>
     <ClCompile Include="BorderFactory.cpp" />
     <ClCompile Include="Button.cpp" />
+    <ClCompile Include="CheckList.cpp" />
+    <ClCompile Include="ComboBox.cpp" />
     <ClCompile Include="Control.cpp" />
     <ClCompile Include="EventHandler.cpp" />
+    <ClCompile Include="Focuslist.cpp" />
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="Label.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MessageBox.cpp" />
+    <ClCompile Include="NumericBox.cpp" />
     <ClCompile Include="Panel.cpp" />
+    <ClCompile Include="RadioBox.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
