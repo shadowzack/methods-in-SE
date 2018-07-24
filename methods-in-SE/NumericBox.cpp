@@ -52,5 +52,3 @@ void NumericBox::mousePressed(int x, int y, bool isLeft) {
 		}
 	}
 }
-
-

@@ -43,7 +43,7 @@ void NumericBox::setLeft(int left) {
 
 }
 
-//button plus 
+//buttonPlus 
 class Plus_button :public MouseListener {
 public:
 	Plus_button() {}
@@ -53,7 +53,7 @@ public:
 	}
 };
 
-//button minus
+//buttonMinus
 class Minus_button :public MouseListener {
 public:
 	virtual void MousePressed(Control &control, int x, int y, bool isLeft) {
