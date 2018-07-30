@@ -1,3 +1,6 @@
+#ifndef FOCUSLIST_H
+#define FOCUSLIST_H
+
 #pragma once
 #include "Button.h"
 
@@ -9,3 +12,5 @@ public:
 	virtual string className() { return "Focuslist"; }
 
 };
+
+#endif
