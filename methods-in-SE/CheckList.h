@@ -1,3 +1,6 @@
+#ifndef CHECKLIST_H
+#define CHECKLIST_H
+
 #pragma once
 #include "Panel.h"
 
@@ -50,3 +53,5 @@ void CheckList::setTop(int top) {
 	}
 
 }
+
+#endif 
