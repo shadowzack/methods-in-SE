@@ -1,3 +1,6 @@
+#ifndef COMBOBOX_H
+#define COMBOBOX_H
+
 #pragma once
 #include "Panel.h"
 #include "Focuslist.h"
@@ -93,3 +96,5 @@ void ComboBox::setTop(int top) {
 	}
 
 }
+
+#endif
