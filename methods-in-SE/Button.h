@@ -16,6 +16,7 @@ public:
 	inline MouseListener& getListener();
 	virtual string className() { return "Button"; }
 
+
 };
 
 MouseListener& Button::getListener() {
