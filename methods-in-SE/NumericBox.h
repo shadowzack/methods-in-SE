@@ -1,3 +1,6 @@
+#ifndef NUMERICBOX_H
+#define NUMERICBOX_H
+
 #pragma once
 #include "Panel.h"
 #include"Button.h"
@@ -61,3 +64,5 @@ public:
 		tmp->setValue(tmp->getValue() - 1);
 	}
 };
+
+#endif
