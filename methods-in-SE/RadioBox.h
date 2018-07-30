@@ -1,3 +1,6 @@
+#ifndef RADIOBOX_H
+#define RADIOBOX_H
+
 #pragma once
 #include "CheckList.h"
 
@@ -13,3 +16,5 @@ public:
 	virtual void restCursor();
 	virtual void keyDown(int keyCode, char charecter);
 };
+
+#endif
