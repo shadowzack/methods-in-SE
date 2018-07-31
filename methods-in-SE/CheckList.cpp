@@ -132,13 +132,16 @@ void CheckList::mousePressed(int x, int y, bool isLeft) {
 
 //what to do in click case
 void CheckList::click(int index) {
+
 	int _lock = 0;
 	for (int i = 0; i < _indexs.size(); i++) {
 		if (_indexs[i] == index) {
 			DeSelectedIndex(index);
 			_lock = 1;
+
 		}
 	}
+
 	if (_lock == 0)
 		SelectedIndex(index);
 }
