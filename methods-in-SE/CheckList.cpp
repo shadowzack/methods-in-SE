@@ -57,13 +57,14 @@ void CheckList::DeSelectedIndex(size_t index) {
 }
 
 void CheckList::restCursor() {
+
 	for (int i = 0; i < _controls.size(); i++) {
 		_controls[i]->setBackground(Color::White);
-		_controls[i]->setForeground(Color::Black);
+		_controls[i]->setBackground(Color::Black);
 		for (int j = 0; j < _indexs.size(); j++) {
 			if (_indexs[j] == i) {
 				_controls[i]->setBackground(Color::Green);
-				_controls[i]->setForeground(Color::Black);
+				_controls[i]->setBackground(Color::Black);
 				break;
 			}
 		}
