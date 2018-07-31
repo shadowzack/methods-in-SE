@@ -10,8 +10,7 @@
 #include "Listeners.h"
 
 
-//Panel* MainPanel = NULL;
-//vector<wstring>str;
+
 SingletonFocused* SingletonFocused::_instance = 0;
 
 messageBoxListener messagebox_listener;
