@@ -11,13 +11,17 @@ class Messagebox : public Panel {
 	MouseListener* _listener;
 
 public:
+	//ctor && dtor
 	Messagebox(int width, int height, wstring error);
+	//setters
 	inline virtual void setTop(int top);
 	inline  virtual void setLeft(int left);
-	inline MouseListener* getListener()const;
 	inline void setText(wstring in);
-	inline bool isOK()const;
+	inline MouseListener* getListener()const;
 	inline void setValue(bool val);
+	//getters
+	inline bool isOK()const;
+
 	virtual void draw(Graphics& g, int x, int y, size_t layer);
 	virtual void mousePressed(int x, int y, bool isLeft);
 	virtual string className() { return "Messagebox"; }

@@ -11,14 +11,18 @@ protected:
 	int _max;
 	int _value;
 public:
+	//ctor && dtor
 	NumericBox(int width, int min, int max);
 	~NumericBox() {}
-	bool setValue(int value);
-	int getValue();
-	virtual bool canGetFocus() { return false; }
-	virtual string className() { return "NumericBox"; }
+	//setters
 	inline virtual void setLeft(int left);
 	inline virtual void setTop(int top);
+	//getters
+	bool setValue(int value);
+	int getValue();
+
+	virtual bool canGetFocus() { return false; }
+	virtual string className() { return "NumericBox"; }
 	virtual void mousePressed(int x, int y, bool isLeft);
 };
 

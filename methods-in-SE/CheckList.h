@@ -10,18 +10,22 @@ protected:
 	vector<size_t> _indexs;
 
 public:
+	//ctor && dtor
 	CheckList(int width, int height, vector<string> entries);
 	~CheckList() {}
 	CheckList() {}
+	//setters
 	void SelectedIndex(size_t index);
 	void DeSelectedIndex(size_t index);
+	inline virtual void setLeft(int left);
+	inline virtual void setTop(int top);
+	//getters
 	vector<size_t>& GetallIndex();
 	vector<string>& Getallentries();
 	wstring s2ws(const std::string& s);
 	virtual bool canGetFocus() { return false; }
 	virtual string className() { return "CheckList"; }
-	inline virtual void setLeft(int left);
-	inline virtual void setTop(int top);
+
 	virtual void mousePressed(int x, int y, bool isLeft);
 	virtual void keyDown(int keyCode, char charecter);
 	virtual void restCursor();
@@ -29,9 +33,6 @@ public:
 };
 
 
-/*
-* Inline Methods
-*/
 // left setting
 void CheckList::setLeft(int left) {
 	_left = left;

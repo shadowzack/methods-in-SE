@@ -67,9 +67,6 @@ public:
 	}
 };
 
-/*
-* Inline Methods
-*/
 
 void ComboBox::setText(wstring text) {
 	_text = text;

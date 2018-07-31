@@ -8,7 +8,7 @@ EventHandler::EventHandler(DWORD input, DWORD output):_console(GetStdHandle(inpu
 {
 	GetConsoleMode(_console, &_consoleMode);
 	SetConsoleMode(_console, ENABLE_WINDOW_INPUT | ENABLE_MOUSE_INPUT);
-	SetConsoleTitle(L"2018 *_* yay");
+	SetConsoleTitle(L"register App");
 
 }
 
