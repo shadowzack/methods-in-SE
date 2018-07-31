@@ -11,7 +11,7 @@ NumericBox::NumericBox(int width, int min, int max) :Panel(2, width + 4), _min(m
 	minus->setForeground(Color::White);
 	this->_controls.push_back(minus);
 	Label* value = new Label(width);
-	value->setText(L" " + to_wstring(_value));    //the value
+	value->setText(L" " + to_wstring(_value));  //the value
 	value->setBackground(Color::White);
 	value->setForeground(Color::Black);
 	this->_controls.push_back(value);
@@ -28,14 +28,16 @@ bool NumericBox::setValue(int value) {
 	if (value>_max || value<_min)
 		return false;
 	_value = value;
-	Label* temp = static_cast<Label*>(_controls[1]);
-	temp->setText(L" " + to_wstring(_value));
+	Label* tmp = static_cast<Label*>(_controls[1]);
+	tmp->setText(L" " + to_wstring(_value));
 	return true;
 
 }
 
 int NumericBox::getValue() {
+	
 	return this->_value;
+
 }
 
 void NumericBox::mousePressed(int x, int y, bool isLeft) {
@@ -47,8 +49,8 @@ void NumericBox::mousePressed(int x, int y, bool isLeft) {
 		int x_l = _controls[i]->getLeft();
 		//int y_t = _controls[i]->getTop();
 		if ((x >= x_l && x <= myx) && (_controls[i]->className() == "Button")) {
-			Button* tmp = static_cast<Button*>(_controls[i]);
-			tmp->getListener().MousePressed(*this, x, y, isLeft);
+			Button* temp = static_cast<Button*>(_controls[i]);
+			temp->getListener().MousePressed(*this, x, y, isLeft);
 		}
 	}
 }
