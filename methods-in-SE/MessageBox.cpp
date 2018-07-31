@@ -60,13 +60,13 @@ void Messagebox::draw(Graphics& g, int x, int y, size_t layer) {
 			int j = 0;
 			for (int i = 0; i < _message.size(); i++) {
 				int z = 0;
-				wstring temp;
+				wstring tmp;
 				while (_message[i] != '\n' && i < _message.size()) {
-					temp += _message[i];
+					tmp += _message[i];
 					i++;
 				}
 				z = i;
-				g.write(x + getLeft() + 1, getTop() + y + j + 1, L" " + temp + wstring(getWidth() - temp.size(), ' '));
+				g.write(x + getLeft() + 1, getTop() + y + j + 1, L" " + tmp + wstring(getWidth() - tmp.size(), ' '));
 				j += 1;
 			}
 			for (int i = _controls.size(); i > 0; i--) {

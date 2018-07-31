@@ -16,6 +16,7 @@ void EventHandler::run(Control &c)
 {
 	int lock = 0;
 	SingletonFocused::instance()->setGraph(_graphics);
+
 	/* checking if the main panel is inside the Console
 	* if no- change the console size
 	*/
