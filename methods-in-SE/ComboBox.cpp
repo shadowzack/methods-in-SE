@@ -67,7 +67,7 @@ void ComboBox::draw(Graphics& g, int x, int y, size_t z) {
 		}
 	}
 }
-
+//set selected index function
 void ComboBox::SetSelectedIndex(int index) {
 	this->_index = index - 1;
 	wstring stemp;
