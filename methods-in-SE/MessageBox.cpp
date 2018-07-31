@@ -81,6 +81,6 @@ void Messagebox::draw(Graphics& g, int x, int y, size_t layer) {
 	}
 }
 
-void Messagebox::addlistener(MouseListener* ms) {
-	this->_listener = ms;
+void Messagebox::addlistener(MouseListener* mouse) {
+	this->_listener = mouse;
 }
