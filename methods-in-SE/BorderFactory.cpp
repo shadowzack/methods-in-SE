@@ -35,6 +35,7 @@ void SingleBorderDrawer::draw(Graphics &g, int left, int top, int width, int hei
 	g.write(left + i, top + height, s);
 }
 
+// borderFactory draw function 
 void DoubleBorderDrawer::draw(Graphics &g, int left, int top, int width, int height) const {
 	char box[6] = { '\xC9','\xCD', '\xBB','\xBA','\xC8','\xBC' };
 	string s;
