@@ -46,10 +46,11 @@ void CheckList::SelectedIndex(size_t index) {
 }
 
 void CheckList::DeSelectedIndex(size_t index) {
-	for (int i = 0; i < _indexs.size(); i++) {
+	
+	for (int i = 0; i < _indexs.size();i++) {
 		if (_indexs[i] == index) {
 			_indexs.erase(_indexs.begin() + i);
-			//turn off backgound
+			// turn off background
 			_controls[index]->setBackground(Color::White);
 		}
 	}
