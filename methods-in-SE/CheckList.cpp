@@ -17,14 +17,14 @@ wstring CheckList::s2ws(const std::string& s)
 }
 
 CheckList::CheckList(int width, int height, vector<string> entries) :Panel((height*entries.size()), width), _entries(entries) {
-	wstring stemp;
+	wstring stmp;
 	for (int i = 0; i < entries.size(); i++) {
 		Focuslist* list = new Focuslist(width);
 		list->setHeight(height);
 		list->setBackground(Color::White);
 		list->setForeground(Color::Black);
-		stemp = s2ws(entries[i]);
-		list->setText(stemp);
+		stmp = s2ws(entries[i]);
+		list->setText(stmp);
 		this->_controls.push_back(list);
 	}
 	_cursorPositiony = _controls[0]->getTop() + 1;
